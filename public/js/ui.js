@@ -14,7 +14,6 @@ function setError(text) {
 $(function () {
     // Show Cartridges
     $(document).on('click', '#showCartridges', function () {
-        console.log('test');
         $('#listCartridges').slideToggle('fast', function () {
             var text = '<div class="realtive">';
             if ($(this).is(":hidden")) {
@@ -41,7 +40,8 @@ $(function () {
             animation: true,
             trigger: 'click',
             offset: 10,
-            placement: 'top'
+            placement: 'top',
+            delay: { show: 500, hide: 100 }
         }).click(function (e) { e.preventDefault(); });
 
         // Make all nodes draggable
